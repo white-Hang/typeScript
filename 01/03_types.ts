@@ -49,5 +49,27 @@ if(typeof e==='string'){
     s=e
 }
 
-//类型断言
+//类型断言 可以用来告诉解析器变量的实际类型
+
+/**
+ * 语法：
+ * 变量 as 类型
+ * <类型>变量
+ * 
+ */
 s=e as string
+
+s=<string>e
+
+//void 用来表示空，以函数为例，就表示没有返回值的函数
+
+function fn():void{
+    return
+}
+
+//never 表示永远不会返回结果
+
+function fn1():never{
+    throw new Error('报错了！')
+}
+
